@@ -6,6 +6,8 @@
  * producing them. See docs/architecture.md for the execution model.
  */
 
+import type { Graph } from '../models/graph'
+
 /** Every primitive operation a visualizer can render for a single step. */
 export const OPERATION_TYPES = [
   'INITIALIZE',
@@ -121,7 +123,7 @@ export interface AlgorithmInput {
   readonly values: readonly number[]
   readonly options?: Readonly<Record<string, string | number | boolean>>
   /** Graph payloads for graph algorithms (BFS, DFS, and later ones). */
-  readonly graph?: import('../models/graph').Graph
+  readonly graph?: import type { Graph } from '../models/graph'
 }
 
 /**
