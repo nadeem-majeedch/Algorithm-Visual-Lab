@@ -1,0 +1,33 @@
+/*
+ * Shared panel language for workspace information panels.
+ * Global utility classes (not CSS modules) so every panel module can
+ * compose them without duplicating the base styles.
+ */
+
+.panel {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: var(--space-4);
+  box-shadow: var(--shadow-card);
+  min-width: 0;
+}
+
+.panel-title {
+  font-size: var(--text-xs);
+  font-weight: var(--weight-semibold);
+  text-transform: uppercase;
+  letter-spacing: var(--tracking-caps);
+  color: var(--color-text-faint);
+}
+
+/* Vertical stack used inside workspace columns. */
+.workspace-column {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+  min-width: 0;
+}

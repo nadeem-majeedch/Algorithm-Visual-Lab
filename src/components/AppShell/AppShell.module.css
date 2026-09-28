@@ -1,0 +1,23 @@
+.appShell {
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  height: 100dvh;
+  background: var(--color-canvas);
+}
+
+.appShellBody {
+  display: flex;
+  min-height: 0;
+}
+
+.appShellMain {
+  flex: 1;
+  min-width: 0;
+  overflow-y: auto;
+}
+
+@media (max-width: 860px) {
+  .appShellBody {
+    flex-direction: column;
+  }
+}

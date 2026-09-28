@@ -1,0 +1,68 @@
+.workspace {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+  padding: var(--space-5);
+  min-width: 0;
+  min-height: 0;
+}
+
+.workspaceHeader {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: var(--space-4);
+  flex-wrap: wrap;
+}
+
+.workspaceTitleGroup {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+  min-width: 0;
+}
+
+.workspaceTitle {
+  margin: 0;
+  font-size: var(--text-2xl);
+  font-weight: var(--weight-bold);
+  letter-spacing: -0.02em;
+  color: var(--color-text);
+}
+
+.workspaceCategory {
+  margin: 0;
+  font-size: var(--text-sm);
+  color: var(--color-text-muted);
+}
+
+.workspaceBody {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+.workspaceRow {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 340px;
+  gap: var(--space-4);
+  align-items: start;
+}
+
+.workspaceRowSecondary {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: var(--space-4);
+  align-items: stretch;
+}
+
+@media (max-width: 1100px) {
+  .workspace {
+    padding: var(--space-4);
+  }
+
+  .workspaceRow,
+  .workspaceRowSecondary {
+    grid-template-columns: 1fr;
+  }
+}

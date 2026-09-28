@@ -1,0 +1,58 @@
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-4);
+  height: var(--header-height);
+  padding: 0 var(--space-5);
+  background: var(--color-surface);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  min-width: 0;
+}
+
+.logo {
+  flex-shrink: 0;
+  width: 30px;
+  height: 30px;
+}
+
+.brandText {
+  min-width: 0;
+}
+
+.brandTitle {
+  font-size: var(--text-lg);
+  font-weight: var(--weight-bold);
+  letter-spacing: -0.01em;
+  line-height: 1.2;
+  color: var(--color-text);
+}
+
+.brandSubtitle {
+  font-size: var(--text-xs);
+  color: var(--color-text-muted);
+}
+
+.phaseBadge {
+  flex-shrink: 0;
+  border: 1px solid var(--color-border-strong);
+  border-radius: var(--radius-full);
+  padding: 2px var(--space-3);
+  font-size: var(--text-xs);
+  font-weight: var(--weight-medium);
+  color: var(--color-text-muted);
+  background: var(--color-surface-raised);
+}
+
+@media (max-width: 640px) {
+  .brandSubtitle,
+  .phaseBadge {
+    display: none;
+  }
+}
